@@ -822,7 +822,7 @@ if add_selectbox=='Transaction' and add_selectbox1=='View Data':
 
         if option_s=='All India':
 
-            mydb=mysql.connect(user="root",password="AccountsandRoles@78",
+            mydb=mysql.connect(user="root",password=<password>,
             host="localhost",database='phonepe')
             my_cursor=mydb.cursor()
             y1=f'SELECT * FROM agg_transaction_details WHERE year="{option_y}" AND quarter="{option_q}"'
@@ -995,7 +995,7 @@ if add_selectbox=='Transaction' and add_selectbox1=='View Data':
                     stream.table(df3)
         
         elif  option_s!='All India':
-            mydb=mysql.connect(user="root",password="AccountsandRoles@78",
+            mydb=mysql.connect(user="root",password=<password>,
             host="localhost",database='phonepe')
             my_cursor=mydb.cursor()
             y1=f'SELECT * FROM agg_transaction_state_details WHERE year="{option_y}" AND state="{option_s}" AND quarter="{option_q}"'
@@ -1170,7 +1170,7 @@ elif add_selectbox=='Transaction' and add_selectbox1=='View Statistic Plots':
         
         
     if option_s=='All India': 
-        mydb=mysql.connect(user="root",password="AccountsandRoles@78",
+        mydb=mysql.connect(user="root",password=<password>,
         host="localhost",database='phonepe')
         my_cursor=mydb.cursor()
         y1=f'SELECT * FROM agg_transaction_details '
@@ -1233,7 +1233,7 @@ elif add_selectbox=='Transaction' and add_selectbox1=='View Statistic Plots':
         top()
     
     else:
-        mydb=mysql.connect(user="root",password="AccountsandRoles@78",
+        mydb=mysql.connect(user="root",password=<password>,
         host="localhost",database='phonepe')
         
         my_cursor=mydb.cursor()
@@ -1314,7 +1314,7 @@ elif add_selectbox=='Transaction' and add_selectbox1=='View Map':
     f = open('india_district_geojson.json')
     data = json.load(f)
 
-    mydb=mysql.connect(user="root",password="AccountsandRoles@78",host="localhost",database='phonepe')
+    mydb=mysql.connect(user="root",password=<password>,host="localhost",database='phonepe')
     my_cursor=mydb.cursor()
     
     if option_choice=='Districtwise':
@@ -1525,7 +1525,7 @@ elif add_selectbox=='User' and add_selectbox1=='View Data':
 
     if option_s=='All India':
 
-            mydb=mysql.connect(user="root",password="AccountsandRoles@78",host="localhost",database='phonepe')
+            mydb=mysql.connect(user="root",password=<password>,host="localhost",database='phonepe')
             my_cursor=mydb.cursor()
             y1=f'SELECT * FROM agg_user_registered_users_details WHERE year="{option_y}" AND quarter="{option_q}"'
             my_cursor.execute(y1)
@@ -1676,7 +1676,7 @@ elif add_selectbox=='User' and add_selectbox1=='View Data':
                     stream.table(df3)
         
     elif  option_s!='All India':
-            mydb=mysql.connect(user="root",password="AccountsandRoles@78",host="localhost",database='phonepe')
+            mydb=mysql.connect(user="root",password=<password>,host="localhost",database='phonepe')
             my_cursor=mydb.cursor()
             y1=f'SELECT * FROM agg_user_registered_users_state_details WHERE year="{option_y}"  AND state="{option_s}" AND quarter="{option_q}"'
             my_cursor.execute(y1)
@@ -1824,7 +1824,7 @@ elif add_selectbox=='User' and add_selectbox1=='View Statistic Plots':
      
       
     if option_s=='All India': 
-        mydb=mysql.connect(user="root",password="AccountsandRoles@78",
+        mydb=mysql.connect(user="root",password=<password>,
         host="localhost",database='phonepe')
         my_cursor=mydb.cursor()
         y1=f'SELECT * FROM agg_user_details '
@@ -1896,7 +1896,7 @@ elif add_selectbox=='User' and add_selectbox1=='View Statistic Plots':
         top()
     
     else:
-        mydb=mysql.connect(user="root",password="AccountsandRoles@78",
+        mydb=mysql.connect(user="root",password=<password>,
         host="localhost",database='phonepe')
         
         my_cursor=mydb.cursor()
@@ -1992,7 +1992,7 @@ elif add_selectbox=='User' and add_selectbox1=='View Map':
     data = json.load(f)
     
     def reg_plot(x1,x2):
-            mydb=mysql.connect(user="root",password="AccountsandRoles@78",host="localhost",database='phonepe')
+            mydb=mysql.connect(user="root",password=<password>,host="localhost",database='phonepe')
             my_cursor=mydb.cursor()
             y1=f'SELECT * FROM map_user_hover_state_details WHERE year="{option_y}"AND state="{option_s}"'
             my_cursor.execute(y1)
@@ -2036,7 +2036,7 @@ elif add_selectbox=='User' and add_selectbox1=='View Map':
             reg_plot(10,11)
             
     def reg_plot_1(x1,x2):
-            mydb=mysql.connect(user="root",password="AccountsandRoles@78",host="localhost",database='phonepe')
+            mydb=mysql.connect(user="root",password=<password>,host="localhost",database='phonepe')
             my_cursor=mydb.cursor()
             y1=f'SELECT * FROM map_user_hover_state_details WHERE year="{option_y}"'
             my_cursor.execute(y1)
@@ -2084,7 +2084,7 @@ elif add_selectbox=='User' and add_selectbox1=='View Map':
             
             f = open('india_states.geojson')
             data = json.load(f)
-            mydb=mysql.connect(user="root",password="AccountsandRoles@78",host="localhost",database='phonepe')
+            mydb=mysql.connect(user="root",password=<password>,host="localhost",database='phonepe')
             my_cursor=mydb.cursor()
             y1=f'SELECT * FROM map_user_hover_details WHERE year="{option_y}"'
             my_cursor.execute(y1)
