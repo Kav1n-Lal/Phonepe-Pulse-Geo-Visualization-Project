@@ -1233,7 +1233,7 @@ elif add_selectbox=='Transaction' and add_selectbox1=='View Statistic Plots':
         top()
     
     else:
-        mydb=mysql.connect(user="root",password=<password>,
+        mydb=mysql.connect(user="root",password="AccountsandRoles@78",
         host="localhost",database='phonepe')
         
         my_cursor=mydb.cursor()
